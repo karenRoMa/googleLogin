@@ -1,0 +1,29 @@
+doctype html
+html(lang="es")
+
+  head
+    title Node Authentication
+    link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css")
+    link(rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+
+    .container
+        .page-header 
+          .text-center
+            h1 
+              span(class= "fa fa-anchor") Profile Page 
+              br
+              a(href="/logout" class="btn btn-default btn-sm") Logout
+              
+        .row
+            .col-sm-6
+                .well
+                    h3(class="text-danger")
+                      span(class = "fa fa-google-plus") Google
+                    p
+                      strong id  #{user.google.id}
+                      br
+                      strong Token #{user.google.token}
+                      br
+                      strong email #{user.google.email}
+                      br
+                      strong name #{user.google.name}
